@@ -56,7 +56,7 @@ if [[ -n $1 ]]
 					then
 						echo "This script is not availible"
 					else
-						bash ./ex.bash "$@"
+						bash ./ex.bash $2
 				fi
 		;;
 			"help")
