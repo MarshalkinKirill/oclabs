@@ -51,8 +51,14 @@ case "$des" in
 	g)
 		echo "Enter exit code"
 		read x
-		bash ./ex.bash $x
-		return
+		INT='^[0-9]+$'
+		if [[ $x =~ $INT ]]
+			then
+				bash ./ex.bash $x
+				return
+			else
+				echo "arg is not a number"
+		fi
 	;;
 esac
 Menu

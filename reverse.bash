@@ -11,7 +11,8 @@ if [[ -n "$1" && -n "$2" ]]
 					then
 					if [[ -r "$1" ]]
 						then
-							rev "$1" > "$2"
+							rev "$1" > "buf.txt"
+							cp "buf.txt" "$2"
 						else
 							echo -e "Not readable"
 							exit -6

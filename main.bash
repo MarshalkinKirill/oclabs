@@ -40,7 +40,7 @@ if [[ -n $1 ]]
 					then
 						echo "This script is not availible"
 					else
-						bash ./strlen.bash "$@"
+						bash ./strlen.bash $2 $3 $4 $5 $6 $7 $8 $9
 				fi
 		;;
 			"log")
@@ -48,11 +48,11 @@ if [[ -n $1 ]]
 					then
 						echo "This script is not availible"
 					else
-						bash ./log.bash "$@"
+						bash ./log.bash
 				fi
 		;;
 			"exit")
-				if ! [[ -f "exit.bash" ]]
+				if ! [[ -f "ex.bash" ]]
 					then
 						echo "This script is not availible"
 					else

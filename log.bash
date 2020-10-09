@@ -6,8 +6,8 @@ NC='\033[0m'
 log="/var/log/anaconda/X.log"
 if [[ -f "$log" ]]
 	then
-		warnings=$(cat $log | awk '/WW/')
-		infos=$(cat $log | awk '/II/')
+		warnings=$(cat $log | awk '/\[/ && /WW/')
+		infos=$(cat $log | awk '/\[/ && /II/')
 		echo -e "${warnings//"(WW)"/"${YELLOW}Warning:${NC}"}"
 		echo -e "${infos//"(II)"/"${BLUE}Information:${NC}"}"
 	else

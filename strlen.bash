@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if [[ -n "$1" ]]
-	then
-		echo "${#1}"
-	else
-		echo "No argumet"
-		exit -2
+if ! [[ $# -eq 1 ]]
+then
+	echo "strlen script need omly one arg. not $#."
+else
+	echo "${#1}"
 fi

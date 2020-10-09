@@ -1,6 +1,6 @@
 #!/bin/bash
 INT='^[+-]?[0-9]+$'
-if [[ -n "$1" ]]
+if [[ -n $1 ]]
 	then
 		if [[ "$1" =~ $INT ]]
 			then
